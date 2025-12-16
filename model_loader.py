@@ -11,7 +11,7 @@ logger = logging.getLogger(__name__)
 
 # Get the absolute path to the model file
 base_dir = os.path.dirname(os.path.abspath(__file__))
-MODEL_PATH = os.path.join(base_dir, "model", "SriLankanFoods_MobileNetV2_New.h5")
+MODEL_PATH = os.path.join(base_dir, "model", "user path")
 
 def create_model_with_original_architecture():
     """
@@ -69,4 +69,5 @@ def get_model():
             logger.error(f"Failed to load weights: {weight_error}")
             logger.warning("Using model with ImageNet weights only.")
         
+
         return model
